@@ -44,7 +44,7 @@ pipeline {
         stage(' Integration and Performance Tests') {
           steps {
             sh './mvnw verify'
-            junit '/home/ubuntu/workspace/spring-petclinic_my-pipeline/target/surefire-reports'
+            junit '**/target/surefire-reports'
           }
         }
 
